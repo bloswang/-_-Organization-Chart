@@ -1,0 +1,131 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>tabRule.html</title>
+    <link type="text/css" rel="stylesheet" href="../style/jsmind.css" />
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <link rel="stylesheet" href="../css/bootstrap-theme.min.css">
+    <link rel="stylesheet" href="../css/demo_css.css">
+</head>
+<body>
+
+<div>
+    <div class="header"></div>
+    <div class="left"></div>
+    <div class="search">
+
+    </div>
+    <div id="jsmind_container" class="clearFix">
+        <button type="button" class="btn btn-danger add" onclick="remove_node();">删除指标</button>
+        <button  type="button" class="btn btn-primary add" onclick="add_node();">添加指标</button>
+
+    </div>
+
+</div>
+
+
+<script src="../js/jquery-3.2.1.min.js"></script>
+<script type="text/javascript" src="../js/bootstrap.min.js"></script>
+<script type="text/javascript" src="../js/jsmind.js"></script>
+<script type="text/javascript" src="../js/jsmind.draggable.js"></script>
+<script type="text/javascript" src="../features/jsmind.shell.js"></script>
+<script type="text/javascript">
+    var _jm = null;
+    function load_jsmind(){
+        var mind = {
+            meta:{
+                name:'demo',
+                author:'hizzgdev@163.com',
+                version:'0.2'
+            },
+            format:'node_array',
+            data:[
+                {"id":"root", "isroot":true, "topic":"中科点击"},
+
+                {"id":"sub1", "parentid":"root", "topic":"研发部门"},
+                {"id":"sub11", "parentid":"sub1", "topic":"前端"},
+                {"id":"sub12", "parentid":"sub1", "topic":"后台"},
+                {"id":"sub13", "parentid":"sub1", "topic":"ui设计"},
+
+                {"id":"sub2", "parentid":"root", "topic":"销售部门"},
+                {"id":"sub21", "parentid":"sub2", "topic":"售前"},
+                {"id":"sub22", "parentid":"sub2", "topic":"售后"},
+
+                {"id":"sub3", "parentid":"root", "topic":"人事部门"},
+                {"id":"sub31", "parentid":"sub3", "topic":"财务"},
+                {"id":"sub32", "parentid":"sub3", "topic":"招聘"}
+            ]
+        };
+        var options = {
+            container:'jsmind_container',
+            editable:true,
+            theme:'primary',
+            shortcut:{
+                handles:{
+                    test:function(j,e){
+                        console.log(j);
+                    }
+                },
+                mapping:{
+                    test:89
+                }
+            }
+        }
+        _jm = jsMind.show(options,mind);
+        // jm.set_readonly(true);
+        // var mind_data = jm.get_data();
+        // alert(mind_data);
+    }
+    function load_file(fi){
+        var files = fi.files;
+        if(files.length > 0){
+            var file_data = files[0];
+            jsMind.util.file.read(file_data, function(freemind_data, jsmind_name){
+                var mind = jsmind_data;
+                if(!!mind){
+                    _jm.show(mind);
+                }else{
+                    console.error('can not open this file as mindmap');
+                }
+            });
+        }
+    }
+    function save_nodetree(){
+        var mind_data = _jm.get_data('node_tree');
+        console.log(mind_data);
+    }
+    function replay(){
+        var shell = _jm.shell;
+        if(!!shell){
+            shell.replay();
+        }
+    }
+    function get_selected_nodeid(){
+        var selected_node = _jm.get_selected_node();
+        if(!!selected_node){
+            return selected_node.id;
+        }else{
+            return null;
+        }
+    }
+    function remove_node(){
+        var selected_id = get_selected_nodeid();
+        if(!selected_id){prompt_info('please select a node first.');return;}
+
+        _jm.remove_node(selected_id);
+    }
+    function add_node(){
+        var selected_node = _jm.get_selected_node(); // as parent of new node
+        if(!selected_node){prompt_info('please select a node first.');return;}
+
+        var nodeid = jsMind.util.uuid.newid();
+        var topic = '* Node_'+nodeid.substr(0,5)+' *';
+        var node = _jm.add_node(selected_node, nodeid, topic);
+    }
+    load_jsmind();
+    _jm.enable_edit()
+</script>
+</body>
+</html>

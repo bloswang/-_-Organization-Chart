@@ -1,0 +1,207 @@
+#jsmind_container{
+    width:80%;
+    height:500px;
+    background:#fff;
+    float: left;
+}
+.add{
+    float: right;
+    margin: 10px;
+}
+.header{
+    width: 100%;
+    height: 80px;
+    background: #339999;
+}
+.left{
+    width: 15%;
+    height:800px;
+    float: left;
+    background: #53BFB5;
+}
+.search{
+    float: left;
+    height: 100px;
+    width: 85%;
+    background: #f9f9f9;
+}
+.clearFix:before,
+.clearFix:after{
+    content: '';
+    display: table;
+    clear: both;
+}
+.btn:focus,
+.btn:active:focus,
+.btn.active:focus,
+.btn.focus,
+.btn:active.focus,
+.btn.active.focus {
+    outline: none;
+}
+
+ul { list-style-type: none;}
+.dowebok li { display: inline-block;}
+input.labelauty + label { font: 12px "Microsoft Yahei";}
+.right_con{
+    background: #ECECEC;
+    float: left;
+    width: 85%;
+}
+.w_bg{
+    width: 100%;
+    padding: 30px 40px;
+    background: white;
+    margin-bottom: 10px;
+}
+.con_header{
+    width: 100%;
+    height: 100px;
+}
+.con_title{
+    font-size: 20px;
+    font-weight: bold;
+}
+.has_f{
+    float: left;
+}
+.page_had{
+    display: inline-block;
+    height: 35px;
+    line-height: 35px;
+}
+.dowebok{
+    width: 90%;
+    line-height: 1;
+}
+.list li{
+    display: inline-block;
+    width: 100%;
+    padding: 20px 0;
+}
+.list li div{
+    float: left;
+    width: 20%;
+    text-align: center;
+}
+.list li:nth-of-type(odd){ background:#f4f4f4;}
+.nav{
+    padding-left: 40px;
+}
+
+h4{
+    margin-top: 0;
+}
+
+.con_tab{
+    float: left;
+    width: 49%;
+    background: #f4f4f4;
+    padding: 30px 20px;
+}
+.left_tab{
+    margin-right: 1%;
+}
+.has_right{
+    margin-right: 30px;
+    display: inline-block;
+}
+.tab_one{
+    width: 100%;
+    text-align: center;
+    background: white;
+}
+.tab_one tr{
+    height: 50px;
+}
+.tab_one tr th{
+    border: 1px solid #999;
+    width: 50%;
+    text-align: center;
+}
+.tab_one tr td{
+    border: 1px solid #999;
+    width: 50%
+}
+
+.btns{
+    margin-left: 50px;
+    margin-bottom: 20px;
+}
+.btns .btn,
+.list .btn{
+    width: 100px;
+    height: 40px;
+    margin-right: 10px;
+    background-color: #53BFB5;
+    color: white;
+}
+
+.demo-input{
+    padding-left: 10px;
+    height: 36px;
+    min-width: 200px;
+    line-height: 38px;
+    border: 1px solid #e6e6e6;
+    background-color: #fff;
+    border-radius: 2px;
+    margin-left: 20px;
+}
+
+
+.login_body{
+    width: 100%;
+    height: 100px;
+}
+.login_l{
+    float: left;
+    width: 50%;
+}
+
+.login_left{
+    margin-top: 100px;
+    font-size: 50px;
+    color: white;
+}
+.has_bo{
+    width: 80%;
+    border-bottom: 1px solid white;
+    margin: 0 auto;
+}
+.login_right{
+    width: 60%;
+    margin: 0 auto;
+    height: 450px;
+    background: #E8E8E8;
+    border-radius: 10px;
+    padding: 70px 100px;
+}
+.center-btn{
+    height: 50px;
+    width: 200px;
+    display: block;
+    margin: 30px auto;
+}
+.form-control{
+    height: 50px;
+}
+.checkbox{
+    width: 100%;
+    position: relative;
+}
+.checkbox a{
+    position: absolute;
+    right: 0;
+    top:0;
+    text-decoration: none;
+    color: #1abc9c;
+}
+.checkbox a:hover{
+    color: #00D3BC;
+}
+.log_tit{
+    font-size: 20px;
+}
+.form-group{
+    margin-bottom: 20px;
+}

@@ -1,0 +1,291 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>anomalies.html</title>
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <link rel="stylesheet" href="../css/bootstrap-theme.min.css">
+    <link rel="stylesheet" href="../css/demo_css.css">
+    <link rel="stylesheet" href="../css/jquery-labelauty.css">
+    <style>
+
+        .tab_item{
+            width: 150px;
+            text-align: center;
+            color: #53BFB5;
+        }
+        .w_bg .nav-tabs>li.active>a{
+            background: #53BFB5;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+
+<div>
+    <div class="header"></div>
+    <div class="left"></div>
+    <div class="right_con ">
+        <div class="con_header w_bg">
+            <span class=" col-lg-4 con_title">筛选条件</span>
+            <div class="row">
+                <div class="col-lg-6">
+                    <div class="input-group input-group-lg">
+                        <div class="input-group-btn">
+                            <button type="button" class="btn dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">全部<span class="caret"></span></button>
+                            <ul class="dropdown-menu">
+                                <li><a href="#">全部</a></li>
+                                <li><a href="#">行业</a></li>
+                                <li><a href="#">数据类型</a></li>
+                            </ul>
+                        </div><!-- /btn-group -->
+                        <input type="text" class="form-control" aria-label="...">
+                        <span class="input-group-btn">
+                            <button class="btn" type="button">搜索</button>
+                        </span>
+                    </div><!-- /input-group -->
+
+                </div><!-- /.col-lg-6 -->
+            </div><!-- /.row -->
+        </div>
+        <div class="w_bg clearFix">
+            <div class="clearFix">
+                <h4 class="has_f page_had">行&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;业:</h4>
+                <ul class="dowebok has_f">
+                    <li><input type="radio" name="hangye" checked data-labelauty="城投"></li>
+                    <li><input type="radio" name="hangye" data-labelauty="物流"></li>
+                    <li><input type="radio" name="hangye" data-labelauty="旅游"></li>
+                    <li><input type="radio" name="hangye" data-labelauty="建筑工程"></li>
+                    <li><input type="radio" name="hangye" data-labelauty="公用事业"></li>
+                    <li><input type="radio" name="hangye" data-labelauty="电子"></li>
+                    <li><input type="radio" name="hangye" data-labelauty="石油石化"></li>
+                    <li><input type="radio" name="hangye" data-labelauty="军工"></li>
+                    <li><input type="radio" name="hangye" data-labelauty="投资"></li>
+                    <li><input type="radio" name="hangye" data-labelauty="新能源"></li>
+                    <li><input type="radio" name="hangye" data-labelauty="TMT"></li>
+                    <li><input type="radio" name="hangye" data-labelauty="农业"></li>
+                    <li><input type="radio" name="hangye" data-labelauty="机械"></li>
+                    <li><input type="radio" name="hangye" data-labelauty="矿业"></li>
+                    <li><input type="radio" name="hangye" data-labelauty="化工"></li>
+                </ul>
+            </div>
+            <div class="clearFix">
+                <h4 class="has_f page_had">数据类型:</h4>
+                <ul class="dowebok has_f">
+                    <li><input type="radio" name="dataType" checked data-labelauty="战略"></li>
+                    <li><input type="radio" name="dataType" data-labelauty="组织"></li>
+                    <li><input type="radio" name="dataType" data-labelauty="企业文化"></li>
+                    <li><input type="radio" name="dataType" data-labelauty="人力资源"></li>
+                    <li><input type="radio" name="dataType" data-labelauty="集团管控"></li>
+                    <li><input type="radio" name="dataType" data-labelauty="营销"></li>
+                </ul>
+            </div>
+            <div class="clearFix dowebok">
+                <h4 class="has_f page_had">时&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;间:</h4>
+                <ul class=" has_f">
+                    <li><input type="radio" name="timer" checked data-labelauty="全部"></li>
+                    <li><input type="radio" name="timer" data-labelauty="今天"></li>
+                    <li><input type="radio" name="timer" data-labelauty="近7天"></li>
+                    <li><input type="radio" name="timer" data-labelauty="近15天"></li>
+                </ul>
+            </div>
+            <div class="clearFix">
+                <h4 class="has_f page_had">信息载体:</h4>
+                <ul class="dowebok has_f">
+                    <li><input type="radio" name="messages" checked data-labelauty="全部"></li>
+                    <li><input type="radio" name="messages" data-labelauty="综合"></li>
+                    <li><input type="radio" name="messages" data-labelauty="论坛"></li>
+                    <li><input type="radio" name="messages" data-labelauty="微信公众号"></li>
+                    <li><input type="radio" name="messages" data-labelauty="政府网站"></li>
+                    <li><input type="radio" name="messages" data-labelauty="企业官网"></li>
+                    <li><input type="radio" name="messages" data-labelauty="行业协会"></li>
+                    <li><input type="radio" name="messages" data-labelauty="开放数据平台"></li>
+                    <li><input type="radio" name="messages" data-labelauty="智库"></li>
+                </ul>
+            </div>
+        </div>
+        <div class="w_bg clearFix">
+            <ul class="nav nav-tabs" role="tablist">
+                <li role="presentation" class="active tab_item">
+                    <a href="#home" aria-controls="home" role="tab" data-toggle="tab">行为异常</a>
+                </li>
+                <li role="presentation" class="tab_item ">
+                    <a href="#profile" aria-controls="profile" role="tab" data-toggle="tab">内容异常</a>
+                </li>
+                <li role="presentation" class=" tab_item">
+                    <a href="#messages" aria-controls="messages" role="tab" data-toggle="tab">指标异常</a>
+                </li>
+                <li role="presentation" class=" tab_item">
+                    <a href="#settings" aria-controls="settings" role="tab" data-toggle="tab">其他异常</a>
+                </li>
+            </ul>
+            <div class="tab-content">
+                <div role="tabpanel" class="tab-pane active" id="home">
+                    <ul class="list clearFix">
+                        <li>
+                            <div>企业</div>
+                            <div>行业</div>
+                            <div>内容</div>
+                            <div>指标名称</div>
+                            <div>操作</div>
+                        </li>
+                        <li>
+                            <div>中煤集团</div>
+                            <div>煤炭</div>
+                            <div>充分发挥协同发展效应，增强集团的核心竞争能力</div>
+                            <div>管理洞察>管理诊断> 发展方向</div>
+                            <div>
+                                <button class="btn" type="button">详情</button>
+                            </div>
+                        </li>
+                        <li>
+                            <div>中煤集团</div>
+                            <div>煤炭</div>
+                            <div>充分发挥协同发展效应，增强集团的核心竞争能力</div>
+                            <div>管理洞察>管理诊断> 发展方向</div>
+                            <div>
+                                <button class="btn" type="button">详情</button>
+                            </div>
+                        </li>
+                        <li>
+                            <div>中煤集团</div>
+                            <div>煤炭</div>
+                            <div>充分发挥协同发展效应，增强集团的核心竞争能力</div>
+                            <div>管理洞察>管理诊断> 发展方向</div>
+                            <div>
+                                <button class="btn" type="button">详情</button>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <div role="tabpanel" class="tab-pane" id="profile">
+                    <ul class="list clearFix">
+                        <li>
+                            <div>企业</div>
+                            <div>行业</div>
+                            <div>内容</div>
+                            <div>指标名称</div>
+                            <div>操作</div>
+                        </li>
+                        <li>
+                            <div>中煤集团2</div>
+                            <div>煤炭</div>
+                            <div>充分发挥协同发展效应，增强集团的核心竞争能力</div>
+                            <div>管理洞察>管理诊断> 发展方向</div>
+                            <div>
+                                <button class="btn" type="button">详情</button>
+                            </div>
+                        </li>
+                        <li>
+                            <div>中煤集团</div>
+                            <div>煤炭</div>
+                            <div>充分发挥协同发展效应，增强集团的核心竞争能力</div>
+                            <div>管理洞察>管理诊断> 发展方向</div>
+                            <div>
+                                <button class="btn" type="button">详情</button>
+                            </div>
+                        </li>
+                        <li>
+                            <div>中煤集团</div>
+                            <div>煤炭</div>
+                            <div>充分发挥协同发展效应，增强集团的核心竞争能力</div>
+                            <div>管理洞察>管理诊断> 发展方向</div>
+                            <div>
+                                <button class="btn" type="button">详情</button>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <div role="tabpanel" class="tab-pane" id="messages">
+                    <ul class="list clearFix">
+                        <li>
+                            <div>企业</div>
+                            <div>行业</div>
+                            <div>内容</div>
+                            <div>指标名称</div>
+                            <div>操作</div>
+                        </li>
+                        <li>
+                            <div>中煤集团3</div>
+                            <div>煤炭</div>
+                            <div>充分发挥协同发展效应，增强集团的核心竞争能力</div>
+                            <div>管理洞察>管理诊断> 发展方向</div>
+                            <div>
+                                <button class="btn" type="button">详情</button>
+                            </div>
+                        </li>
+                        <li>
+                            <div>中煤集团</div>
+                            <div>煤炭</div>
+                            <div>充分发挥协同发展效应，增强集团的核心竞争能力</div>
+                            <div>管理洞察>管理诊断> 发展方向</div>
+                            <div>
+                                <button class="btn" type="button">详情</button>
+                            </div>
+                        </li>
+                        <li>
+                            <div>中煤集团</div>
+                            <div>煤炭</div>
+                            <div>充分发挥协同发展效应，增强集团的核心竞争能力</div>
+                            <div>管理洞察>管理诊断> 发展方向</div>
+                            <div>
+                                <button class="btn" type="button">详情</button>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <div role="tabpanel" class="tab-pane" id="settings">
+                    <ul class="list clearFix">
+                        <li>
+                            <div>企业</div>
+                            <div>行业</div>
+                            <div>内容</div>
+                            <div>指标名称</div>
+                            <div>操作</div>
+                        </li>
+                        <li>
+                            <div>中煤集团4</div>
+                            <div>煤炭</div>
+                            <div>充分发挥协同发展效应，增强集团的核心竞争能力</div>
+                            <div>管理洞察>管理诊断> 发展方向</div>
+                            <div>
+                                <button class="btn" type="button">详情</button>
+                            </div>
+                        </li>
+                        <li>
+                            <div>中煤集团</div>
+                            <div>煤炭</div>
+                            <div>充分发挥协同发展效应，增强集团的核心竞争能力</div>
+                            <div>管理洞察>管理诊断> 发展方向</div>
+                            <div>
+                                <button class="btn" type="button">详情</button>
+                            </div>
+                        </li>
+                        <li>
+                            <div>中煤集团</div>
+                            <div>煤炭</div>
+                            <div>充分发挥协同发展效应，增强集团的核心竞争能力</div>
+                            <div>管理洞察>管理诊断> 发展方向</div>
+                            <div>
+                                <button class="btn" type="button">详情</button>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+<script src="../js/jquery-3.2.1.min.js"></script>
+<script src="../js/jquery-labelauty.js"></script>
+<script type="text/javascript" src="../js/bootstrap.min.js"></script>
+
+<script type="text/javascript">
+    $(function(){
+        $(':input').labelauty();
+    });
+</script>
+</body>
+</html>
